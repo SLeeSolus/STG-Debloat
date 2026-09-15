@@ -1,6 +1,9 @@
 # STG-Debloat
 Debloat scripts for STG.
 
+## How to use this stuff
+
+
 ## To-Do
 - Remove HP Bloat
     - ✕ Needs further testing.
