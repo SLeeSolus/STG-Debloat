@@ -1,0 +1,13 @@
+HP Documentation
+C:\Program Files\HP\Documentation\Doc_Uninstall.cmd
+
+HP Connection Optimizer
+"C:\Program Files (x86)\InstallShield Installation Information\{6468C4A5-E47E-405F-B675-A70A70983EA6}\setup.exe" -runfromtemp -l0x0409  -removeonly
+
+Find Program and it's uninstall path
+Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, UninstallString
+
+Execute uninstall string
+Start-Process msiexec.exe -ArgumentList "/X{YOUR-PROGRAM-GUID-HERE} /qn" -Wait
+
+
