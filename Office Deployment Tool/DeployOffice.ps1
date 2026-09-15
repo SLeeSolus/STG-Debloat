@@ -1,1 +1,1 @@
-Start-Process -FilePath ".\setup.exe" -ArgumentList "/configure .\configuration-O365BusinessRetail.xml" -Wait
+Start-Process -FilePath ".\setup.exe" -ArgumentList "/configure .\STG-O365-Office-Deployment-Config.xml" -Wait
