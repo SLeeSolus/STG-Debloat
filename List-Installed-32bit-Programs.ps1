@@ -5,6 +5,6 @@ $paths = @(
 )
 Get-ItemProperty -Path $paths -ErrorAction SilentlyContinue | 
     Where-Object { $_.DisplayName } | 
-    Select-Object DisplayName, DisplayVersion, Publisher | 
+    Select-Object DisplayName, DisplayVersion, Publisher, UninstallString | 
     Sort-Object DisplayName | 
     Format-Table -AutoSize
