@@ -264,7 +264,7 @@ function Remove-InstalledAppxPackages {
 # ---------------------------
 # Step 3: Remove Installed Programs
 # ---------------------------
-function Remove-InstalledPrograms 
+function Remove-InstalledPrograms { 
     foreach ($prog in $InstalledPrograms) {
         if ($DryRun) {
             Write-Host "DRY RUN: Would uninstall program: [$($prog.Name)]"
