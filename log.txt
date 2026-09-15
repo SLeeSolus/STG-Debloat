@@ -1,0 +1,312 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260915120451
+Username: TEST\TEST1
+RunAs User: TEST\TEST1
+Configuration Name: 
+Machine: TEST (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 1824
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\log.txt
+PS C:\Users\TEST1\Downloads\STG-Debloat-main\STG-Debloat-main> ls
+
+
+    Directory: C:\Users\TEST1\Downloads\STG-Debloat-main\STG-Debloat-main
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         9/15/2026  12:04 PM                HP
+d-----         9/15/2026  12:04 PM                Office Deployment Tool
+-a----         9/15/2026  12:04 PM          18956 Debloat-Script.ps1
+-a----         9/15/2026  12:04 PM            446 List-Installed-32bit-Programs.ps1
+-a----         9/15/2026  12:04 PM            224 List-Installed-64bit-Programs.ps1
+-a----         9/15/2026  12:04 PM              0 log.txt
+-a----         9/15/2026  12:04 PM            509 Misc Uninstall.txt
+-a----         9/15/2026  12:04 PM            284 README.md
+
+
+PS C:\Users\TEST1\Downloads\STG-Debloat-main\STG-Debloat-main> .\Debloat-Script.ps1
+Collecting installed HP AppX packages...
+Collecting provisioned HP AppX packages...
+Collecting installed HP programs...
+Skipping removal of HotKeyServiceUWP (preserved).
+Removing other HP-related services...
+Starting HP bloatware removal process...
+
+
+Path          :
+Online        : True
+RestartNeeded : False
+
+Successfully removed provisioned package: [AD2F1837.HPPCHardwareDiagnosticsWindows]
+Path          :
+Online        : True
+RestartNeeded : False
+
+Successfully removed provisioned package: [AD2F1837.HPSupportAssistant]
+Successfully removed Appx package: [AD2F1837.HPSupportAssistant]
+Successfully removed Appx package: [AD2F1837.HPPCHardwareDiagnosticsWindows]
+PS C:\Users\TEST1\Downloads\STG-Debloat-main\STG-Debloat-main> TerminatingError(Uninstall-Package): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Uninstallation operation failed. Please look at 'C:\Users\TEST1\AppData\Local\Temp\38a62513-2bbd-42bf-9c64-8e536a80fae5\msi.log' file for details."
+WARNING: Failed to uninstall program: [HP Security Update Service] - Uninstallation operation failed. Please look at 'C:\Users\TEST1\AppData\Local\Temp\38a62513-2bbd-42bf-9c64-8e536a80fae5\msi.log' file for details.
+Attempting MSI uninstall for: [HP Security Update Service]...
+MSI uninstall initiated for: [HP Security Update Service]
+
+FastPackageReference : {142F2395-3FCA-46F9-8867-A1968186E087}
+ProviderName         : msi
+Source               :
+Status               : Uninstalled
+SearchKey            : {142F2395-3FCA-46F9-8867-A1968186E087}
+FullPath             :
+PackageFilename      :
+FromTrustedSource    : False
+Summary              :
+SwidTags             : {HP System Default Settings}
+CanonicalId          : msi:HP System Default Settings/1.5.6.1
+Metadata             : {ProductCode}
+SwidTagText          : <?xml version="1.0" encoding="utf-16" standalone="yes"?>
+                       <SoftwareIdentity
+                         name="HP System Default Settings"
+                         version="1.5.6.1"
+                         versionScheme="multipartnumeric"
+                         tagId="142F2395-3FCA-46F9-8867-A1968186E087"
+                       xmlns="http://standards.iso.org/iso/19770/-2/2015/schema.xsd">
+                         <Meta
+                           ProductCode="{142F2395-3FCA-46F9-8867-A1968186E087}" />
+                       </SoftwareIdentity>
+Dependencies         : {}
+IsCorpus             :
+Name                 : HP System Default Settings
+Version              : 1.5.6.1
+VersionScheme        : multipartnumeric
+TagVersion           :
+TagId                : 142F2395-3FCA-46F9-8867-A1968186E087
+IsPatch              :
+IsSupplemental       :
+AppliesToMedia       :
+Meta                 : {{ProductCode}}
+Links                : {}
+Entities             : {}
+Payload              :
+Evidence             :
+Culture              :
+Attributes           : {name,version,versionScheme,tagId}
+
+Successfully uninstalled: [HP System Default Settings]
+
+FastPackageReference : {B2BCA3B5-5D1A-4B4F-A535-B7966527106B}
+ProviderName         : msi
+Source               :
+Status               : Uninstalled
+SearchKey            : {B2BCA3B5-5D1A-4B4F-A535-B7966527106B}
+FullPath             :
+PackageFilename      :
+FromTrustedSource    : False
+Summary              :
+SwidTags             : {HP Wolf Security Application Support for Sure Sense}
+CanonicalId          : msi:HP Wolf Security Application Support for Sure Sense/4.4.33.1019
+Metadata             : {ProductCode}
+SwidTagText          : <?xml version="1.0" encoding="utf-16" standalone="yes"?>
+                       <SoftwareIdentity
+                         name="HP Wolf Security Application Support for Sure Sense"
+                         version="4.4.33.1019"
+                         versionScheme="multipartnumeric"
+                         tagId="B2BCA3B5-5D1A-4B4F-A535-B7966527106B"
+                       xmlns="http://standards.iso.org/iso/19770/-2/2015/schema.xsd">
+                         <Meta
+                           ProductCode="{B2BCA3B5-5D1A-4B4F-A535-B7966527106B}" />
+                       </SoftwareIdentity>
+Dependencies         : {}
+IsCorpus             :
+Name                 : HP Wolf Security Application Support for Sure Sense
+Version              : 4.4.33.1019
+VersionScheme        : multipartnumeric
+TagVersion           :
+TagId                : B2BCA3B5-5D1A-4B4F-A535-B7966527106B
+IsPatch              :
+IsSupplemental       :
+AppliesToMedia       :
+Meta                 : {{ProductCode}}
+Links                : {}
+Entities             : {}
+Payload              :
+Evidence             :
+Culture              :
+Attributes           : {name,version,versionScheme,tagId}
+
+Successfully uninstalled: [HP Wolf Security Application Support for Sure Sense]
+
+FastPackageReference : {65303677-89E5-11F1-9C01-FC30DCFCB83D}
+ProviderName         : msi
+Source               :
+Status               : Uninstalled
+SearchKey            : {65303677-89E5-11F1-9C01-FC30DCFCB83D}
+FullPath             :
+PackageFilename      :
+FromTrustedSource    : False
+Summary              :
+SwidTags             : {HP Wolf Security}
+CanonicalId          : msi:HP Wolf Security/4.4.33.1019
+Metadata             : {ProductCode}
+SwidTagText          : <?xml version="1.0" encoding="utf-16" standalone="yes"?>
+                       <SoftwareIdentity
+                         name="HP Wolf Security"
+                         version="4.4.33.1019"
+                         versionScheme="multipartnumeric"
+                         tagId="65303677-89E5-11F1-9C01-FC30DCFCB83D"
+                       xmlns="http://standards.iso.org/iso/19770/-2/2015/schema.xsd">
+                         <Meta
+                           ProductCode="{65303677-89E5-11F1-9C01-FC30DCFCB83D}" />
+                       </SoftwareIdentity>
+Dependencies         : {}
+IsCorpus             :
+Name                 : HP Wolf Security
+Version              : 4.4.33.1019
+VersionScheme        : multipartnumeric
+TagVersion           :
+TagId                : 65303677-89E5-11F1-9C01-FC30DCFCB83D
+IsPatch              :
+IsSupplemental       :
+AppliesToMedia       :
+Meta                 : {{ProductCode}}
+Links                : {}
+Entities             : {}
+Payload              :
+Evidence             :
+Culture              :
+Attributes           : {name,version,versionScheme,tagId}
+
+Successfully uninstalled: [HP Wolf Security]
+
+FastPackageReference : {627D40D8-9926-42C1-BA7F-6AA7A5DFFE9A}
+ProviderName         : msi
+Source               :
+Status               : Uninstalled
+SearchKey            : {627D40D8-9926-42C1-BA7F-6AA7A5DFFE9A}
+FullPath             :
+PackageFilename      :
+FromTrustedSource    : False
+Summary              :
+SwidTags             : {HP Wolf Security - Console}
+CanonicalId          : msi:HP Wolf Security - Console/11.1.8.1209
+Metadata             : {ProductCode}
+SwidTagText          : <?xml version="1.0" encoding="utf-16" standalone="yes"?>
+                       <SoftwareIdentity
+                         name="HP Wolf Security - Console"
+                         version="11.1.8.1209"
+                         versionScheme="multipartnumeric"
+                         tagId="627D40D8-9926-42C1-BA7F-6AA7A5DFFE9A"
+                       xmlns="http://standards.iso.org/iso/19770/-2/2015/schema.xsd">
+                         <Meta
+                           ProductCode="{627D40D8-9926-42C1-BA7F-6AA7A5DFFE9A}" />
+                       </SoftwareIdentity>
+Dependencies         : {}
+IsCorpus             :
+Name                 : HP Wolf Security - Console
+Version              : 11.1.8.1209
+VersionScheme        : multipartnumeric
+TagVersion           :
+TagId                : 627D40D8-9926-42C1-BA7F-6AA7A5DFFE9A
+IsPatch              :
+IsSupplemental       :
+AppliesToMedia       :
+Meta                 : {{ProductCode}}
+Links                : {}
+Entities             : {}
+Payload              :
+Evidence             :
+Culture              :
+Attributes           : {name,version,versionScheme,tagId}
+
+Successfully uninstalled: [HP Wolf Security - Console]
+
+FastPackageReference : {19F557DE-662A-4FEA-B635-1CACD56CC483}
+ProviderName         : msi
+Source               :
+Status               : Uninstalled
+SearchKey            : {19F557DE-662A-4FEA-B635-1CACD56CC483}
+FullPath             :
+PackageFilename      :
+FromTrustedSource    : False
+Summary              :
+SwidTags             : {HP Notifications}
+CanonicalId          : msi:HP Notifications/1.1.31.56
+Metadata             : {ProductCode}
+SwidTagText          : <?xml version="1.0" encoding="utf-16" standalone="yes"?>
+                       <SoftwareIdentity
+                         name="HP Notifications"
+                         version="1.1.31.56"
+                         versionScheme="multipartnumeric"
+                         tagId="19F557DE-662A-4FEA-B635-1CACD56CC483"
+                       xmlns="http://standards.iso.org/iso/19770/-2/2015/schema.xsd">
+                         <Meta
+                           ProductCode="{19F557DE-662A-4FEA-B635-1CACD56CC483}" />
+                       </SoftwareIdentity>
+Dependencies         : {}
+IsCorpus             :
+Name                 : HP Notifications
+Version              : 1.1.31.56
+VersionScheme        : multipartnumeric
+TagVersion           :
+TagId                : 19F557DE-662A-4FEA-B635-1CACD56CC483
+IsPatch              :
+IsSupplemental       :
+AppliesToMedia       :
+Meta                 : {{ProductCode}}
+Links                : {}
+Entities             : {}
+Payload              :
+Evidence             :
+Culture              :
+Attributes           : {name,version,versionScheme,tagId}
+
+Successfully uninstalled: [HP Notifications]
+Successfully uninstalled: [HP Connection Optimizer]
+Running fallback for HP Wolf Security uninstall...
+HP bloatware removal process complete.
+Remaining AppX packages matching 'HP':
+
+
+
+Name                                    PackageFullName
+----                                    ---------------
+RealtekSemiconductorCorp.HPAudioControl RealtekSemiconductorCorp.HPAudioControl_2.53.384.0_x64__dt...
+
+
+Remaining provisioned packages matching 'HP':
+
+DisplayName                             PackageName
+-----------                             -----------
+RealtekSemiconductorCorp.HPAudioControl RealtekSemiconductorCorp.HPAudioControl_2.53.384.0_neutral...
+
+
+Remaining installed packages matching 'HP':
+
+Name
+----
+HP Security Update Service
+HP Connection Optimizer
+HP Wolf Security Application Support for Credential Protection AI Support
+HP Wolf Security Application Support for Chrome 150.0.7871.47
+HP Inc. SoftwareDevice Driver Update (1.1.10.1)
+HP Driver Update (2.21.0.0)
+HP Inc. - Extension - 4.8.125.0
+HP Inc. - SoftwareComponent - 4.8.125.0
+HP Inc. - SoftwareComponent - 4.2.2494.0
+HP Inc. - SoftwareComponent - 1.83.4311.0
+
+
+PS C:\Users\TEST1\Downloads\STG-Debloat-main\STG-Debloat-main> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260915120652
+**********************
