@@ -5,12 +5,14 @@ Debloat scripts for STG.
 
 
 ## To-Do
+- Create another PowerShell script that starts Debloat.ps1 and DeployOffice.ps1
+
 - Remove HP Bloat
     - ✕ Needs further testing.
 
 - Office Deployment
     - ✓ Uninstall pre-installed Office
-    - ✓ Install 32bit Office
+    - ✓ Install 32bit Office 
 
 - Installation of Software
     - SX.e
