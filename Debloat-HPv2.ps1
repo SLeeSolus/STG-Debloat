@@ -432,11 +432,11 @@ function Remove-OfficeFromRegistryFallback {
         else {
             try {
                 [xml]$configXml = @"
-<Configuration Product="$productID">
-    <Display Level="none" CompletionNotice="no" SuppressModal="yes" AcceptEula="yes" />
-    <Setting Id="SETUP_REBOOT" Value="Never" />
-</Configuration>
-"@
+			<Configuration Product="$productID">
+    			<Display Level="none" CompletionNotice="no" SuppressModal="yes" AcceptEula="yes" />
+    			<Setting Id="SETUP_REBOOT" Value="Never" />
+			</Configuration>
+			"@
                 $configXml.Save($xmlFile)
                 $UninstallString = "$($_.UninstallString) /config `"$xmlFile`""
             } catch {
