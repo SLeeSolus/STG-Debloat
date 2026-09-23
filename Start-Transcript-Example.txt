@@ -1,0 +1,58 @@
+**********************
+PowerShell transcript start
+Start time: 20260923102415
+Username: GRILLBYS\MyMachine
+RunAs User: GRILLBYS\MyMachine
+Configuration Name: 
+Machine: GRILLBYS (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe\pwsh.dll
+Process ID: 13432
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.19045
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is ./Example.txt
+┏[ MyMachine from  Grillbys][ 0.03s][ RAM: 10/31GB][ Wednesday at 10:24:15 AM][main ≡  ?1 |  -2]
+┖[~\Repos\STG-Debloat]
+└─Δ
+PS>ls
+
+    Directory: C:\Users\Seans\Repos\STG-Debloat
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           9/22/2026  4:49 PM                Office Deployment Tool
+-a---           9/22/2026  4:49 PM          19458 Debloat.ps1
+-a---           9/23/2026 10:24 AM            675 Example.txt
+-a---           9/22/2026  4:49 PM            471 List-Installed-32bit-Programs.ps1
+-a---           9/22/2026  4:49 PM            227 List-Installed-64bit-Programs.ps1
+-a---           9/22/2026  4:49 PM           1323 README.md
+
+┏[ MyMachine from  Grillbys][ 0.006s][ RAM: 10/31GB][ Wednesday at 10:24:17 AM][main ≡  ?1 |  -2]
+┖[~\Repos\STG-Debloat]
+└─Δ
+PS>cat .\List-Installed-32bit-Programs.ps1
+$paths = @(
+    'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
+    'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+    'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+)
+Get-ItemProperty -Path $paths -ErrorAction SilentlyContinue |
+    Where-Object { $_.DisplayName } |
+    Select-Object DisplayName, DisplayVersion, Publisher, UninstallString |
+    Sort-Object DisplayName |
+    Format-Table -AutoSize
+┏[ MyMachine from  Grillbys][ 0.024s][ RAM: 10/31GB][ Wednesday at 10:24:31 AM][main ≡  ?1 |  -2]
+┖[~\Repos\STG-Debloat]
+└─Δ
+PS>Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20260923102434
+**********************
